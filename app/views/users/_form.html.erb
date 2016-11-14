@@ -1,6 +1,8 @@
-<div id="error_explanation">
-  Há erros no formulário, por favor verifique.
-</div>
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <%= t 'general.form_error' %>
+  </div>
+<% end %>
 
 <%= form_for @user do |f| %>
 <p>
